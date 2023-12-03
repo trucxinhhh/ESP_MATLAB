@@ -1,0 +1,32 @@
+[System]
+Name='check'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=3
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='input1'
+Range=[0 100]
+NumMFs=3
+MF1='KHO':'trimf',[-41.67 0 41.67]
+MF2='VUA':'trimf',[30 50 70]
+MF3='AM':'trimf',[70 100 141.7]
+
+[Output1]
+Name='output1'
+Range=[0 1]
+NumMFs=2
+MF1='TAT':'trimf',[-0.4167 0 0.5]
+MF2='BAT':'trimf',[0.5 1 1]
+
+[Rules]
+1, 2 (1) : 1
+3, 1 (1) : 1
+2, 2 (1) : 1

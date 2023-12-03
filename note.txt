@@ -1,0 +1,24 @@
+POST AND GET MQTT (23265948)
+user
+HRYkGSUGORsmEQ4AES8vJxk
+pass:
+3eUCRNSAHS3ECZaNwu57y88y
+
+
+THINGSPEAK: 
+20123671.truc@student.iuh.edu.vn
+_!?E%A4wAjCc8cb
+
+
+https://deviot.vn/tutorials/esp32.66047996/moi-truong-lap-trinh-esp32-va-nen-tang-arduino-ide.54524112
+
+cai thu vien Wifi.h tai:
+https://www.arduino.cc/reference/en/libraries/wifi/
+channels/<channelID>/publish/fields/field<fieldNumber>
+
+fisData = getFISCodeGenerationData('Fuzzy_Model.fis');
+output = evalfis(fisData,data);
+disp(output);
+
+thingSpeakWrite(2327722,'Fields',2,'Values',output,'WriteKey','NXGPB1CDKCPB9H9U')
+pause(3)

@@ -1,0 +1,46 @@
+[System]
+Name='fuzzy'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=9
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='humi'
+Range=[0 100]
+NumMFs=3
+MF1='KHÔ':'trimf',[-41.67 0 41.67]
+MF2='VỪA':'trimf',[8.333 50 91.67]
+MF3='ẨM':'trimf',[58.33 100 141.7]
+
+[Input2]
+Name='temp'
+Range=[0 100]
+NumMFs=3
+MF1='LANH':'trimf',[-41.67 0 41.67]
+MF2='VUA':'trimf',[8.333 50 91.67]
+MF3='NÓNG':'trimf',[58.33 100 141.7]
+
+[Output1]
+Name='DC'
+Range=[0 1]
+NumMFs=2
+MF1='TẮT':'trimf',[-0.4167 0 0.5]
+MF2='MỞ':'trimf',[0.5 1 1.417]
+
+[Rules]
+1 1, 2 (1) : 1
+1 2, 2 (1) : 1
+1 3, 2 (1) : 1
+2 1, 1 (1) : 1
+2 2, 1 (1) : 1
+2 3, 2 (1) : 1
+3 1, 1 (1) : 1
+3 2, 1 (1) : 1
+3 3, 1 (1) : 1
